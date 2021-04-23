@@ -7,7 +7,7 @@ vim.bo.smartindent = true
 vim.bo.expandtab = true
 vim.bo.tabstop = 2
 vim.bo.shiftwidth = 2
-vim.bo.softtabstop = 0
+vim.bo.softtabstop = 2
 
 -- window only
 vim.wo.signcolumn = 'yes:1'
@@ -22,4 +22,5 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.laststatus = 2
 vim.o.mouse = 'nivh'
+vim.o.completeopt = 'menuone,noinsert,noselect'
 

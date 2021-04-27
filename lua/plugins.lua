@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use {
@@ -23,7 +23,7 @@ return require('packer').startup(function()
 	}
 
 	use {
-		'nvim-treesitter/nvim-treesitter', 
+		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',
 		config = function()
 			require'nvim-treesitter.configs'.setup{
@@ -40,11 +40,7 @@ return require('packer').startup(function()
 		end
 	}
 
-	use {
-		'glepnir/galaxyline.nvim',
-		branch = 'main',
-		requires = {'kyazdani42/nvim-web-devicons', opt = true}
-	}
+	require'plugconf.galaxyline'(use)
 
 	use 'glepnir/indent-guides.nvim'
 end)

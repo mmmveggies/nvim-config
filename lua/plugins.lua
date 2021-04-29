@@ -5,10 +5,15 @@ return require('packer').startup(function(use)
 
 	use 'glepnir/indent-guides.nvim'
 	use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}}
+	use {
+    'akinsho/nvim-bufferline.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function() require'bufferline'.setup{} end
+  }
 
 	require('plugconf.nvim-treesitter')(use)
 	require('plugconf.nvim-lspconfig')(use)
 	require('plugconf.telescope')(use)
-	require('plugconf.galaxyline')(use)
+--	require('plugconf.galaxyline')(use)
 	require('plugconf.completion-nvim')(use)
 end)

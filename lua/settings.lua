@@ -15,6 +15,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- global
+vim.o.splitbelow = true
 vim.o.scrolloff = 7
 vim.o.whichwrap = vim.o.whichwrap..'<,>,h,l'
 vim.o.inccommand = 'nosplit'
@@ -23,4 +24,5 @@ vim.o.smartcase = true
 vim.o.laststatus = 2
 vim.o.mouse = 'nivh'
 vim.o.completeopt = 'menuone,noinsert,noselect'
+vim.o.termguicolors = true
 

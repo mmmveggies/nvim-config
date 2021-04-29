@@ -1,18 +1,28 @@
 local km = vim.api.nvim_set_keymap
 
--- Save
-km('n', '<leader>w', '<cmd>w<cr>', {noremap=true, silent=true})
-km('n', '<leader>sv', ':luafile $MYVIMRC<cr>', {noremap=true})
+-- "HOT" RELOADING
+km('n', '<leader>0', ':luafile ~/.config/nvim/lua/mappings.lua<cr>', {noremap=true})
 
--- Autocomplete
+-- Copy/Paste
+km('', '<leader>y', '"+y', {noremap=true})
+km('', '<leader>p', '"+p', {noremap=true})
+
+-- Save
+km('n', '<leader>s', '<cmd>w<cr>', {noremap=true, silent=true})
+
+-- Autocomplete ... these don't work
 km('i', '<expr><Tab>', 'pumvisible() ? "\\<c-n>" : "\\<Tab>"', {noremap = true})
 km('i', '<expr><s-Tab>', 'pumvisible() ? "\\<c-p>" : "\\<Tab>"', {noremap = true})
 
--- Navigate Panes
+-- Panes
 km('n', '<c-h>', '<c-w>h', {noremap = true})
 km('n', '<c-j>', '<c-w>j', {noremap = true})
 km('n', '<c-k>', '<c-w>k', {noremap = true})
 km('n', '<c-l>', '<c-w>l', {noremap = true})
+km('n', '<leader>wh', ':vertical :res -10<cr>', {noremap = true})
+km('n', '<leader>wl', ':vertical :res +10<cr>', {noremap = true})
+km('n', '<leader>wj', ':res +10<cr>', {noremap = true})
+km('n', '<leader>wk', ':res -10<cr>', {noremap = true})
 
 -- Telescope
 km('n', '<leader>ff', '<cmd>Telescope find_files theme=get_dropdown<cr>', {noremap = true})

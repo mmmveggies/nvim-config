@@ -20,12 +20,6 @@ return require('packer').startup(function(use)
 	}
 
 	use {
-		'akinsho/nvim-bufferline.lua',
-		requires = 'kyazdani42/nvim-web-devicons',
-		config = function() require'bufferline'.setup{} end
-	}
-
-	use {
 		'nvim-lua/completion-nvim',
 		config = function() vim.cmd [[autocmd BufEnter * lua require'completion'.on_attach()]] end
 	}
@@ -44,6 +38,12 @@ return require('packer').startup(function(use)
 				highlight = {enable = true},
 			}
 		end
+	}
+
+	use {
+		'hoob3rt/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true},
+		config = function() require'lualine'.setup{} end
 	}
 
 	use {

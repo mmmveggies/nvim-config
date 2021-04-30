@@ -13,6 +13,7 @@ vim.bo.shiftwidth = 2
 -- vim.bo.softtabstop = 2
 
 -- window only
+vim.wo.cursorline = true
 vim.wo.signcolumn = 'yes:1'
 vim.wo.number = true
 vim.wo.relativenumber = true

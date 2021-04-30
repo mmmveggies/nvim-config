@@ -1,11 +1,14 @@
+-- vim.cmd [[colorscheme gruvbox]]
+
 vim.g.mapleader = [[ ]]
 vim.g.maplocalleader = [[,]]
 
 -- buffer only
 vim.bo.textwidth = 100
 vim.bo.smartindent = true
-vim.bo.expandtab = true
+vim.bo.expandtab = false
 vim.bo.tabstop = 2
+vim.bo.shiftwidth = 2
 vim.bo.shiftwidth = 2
 vim.bo.softtabstop = 2
 
@@ -15,6 +18,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- global
+vim.o.background = 'dark'
 vim.o.splitbelow = true
 vim.o.scrolloff = 7
 vim.o.whichwrap = vim.o.whichwrap..'<,>,h,l'

@@ -14,6 +14,11 @@ return require('packer').startup(function(use)
 	}
 
 	use {
+    'rafamadriz/friendly-snippets',
+		requires = {'hrsh7th/vim-vsnip'}
+	}
+
+	use {
 		'tjdevries/gruvbuddy.nvim',
 		requires = {'tjdevries/colorbuddy.vim'},
 		config = function() require'colorbuddy'.colorscheme'gruvbuddy' end
@@ -26,7 +31,7 @@ return require('packer').startup(function(use)
 
 	use {
 		'neovim/nvim-lspconfig',
-		run = 'npm i -g typescript-language-server'
+		run = 'npm i -g typescript-language-server graphql-language-service-cli'
 	}
 
 	use {

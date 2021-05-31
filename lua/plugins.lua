@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+  use 'b3nj5m1n/kommentary'
 
 	use {
 		'glepnir/indent-guides.nvim',

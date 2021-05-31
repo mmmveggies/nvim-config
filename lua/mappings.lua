@@ -41,7 +41,7 @@ km('n', '<leader>wh', '<cmd>vert <cmd>res -99<cr><cmd>vert :res +10<cr>', norema
 km('n', '<leader>ff', '<cmd>Telescope find_files theme=get_dropdown<cr>', noremap)
 km('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
 km('n', '<leader>fb', '<cmd>Telescope buffers<cr>', noremap)
-km('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)
+km('n', '<leader>fh', '<cmd>Telescope help_tags theme=get_dropdown<cr>', noremap)
 
 -- LSP
 km('n', '<leader><leader>', '<cmd>lua vim.lsp.buf.hover()<cr>', noremap)
